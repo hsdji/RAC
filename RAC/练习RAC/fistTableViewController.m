@@ -47,7 +47,7 @@
     
     @weakify(self)
     self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        @strongify(self)
+        @strongify(self)   
         [self.viewModel loadData];
     }];
 
