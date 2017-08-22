@@ -46,6 +46,7 @@
 		96202D061F4AD50C006CF139 /* fisModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96202D051F4AD50C006CF139 /* fisModel.m */; };
 		96202D091F4AD597006CF139 /* fistViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96202D081F4AD597006CF139 /* fistViewModel.m */; };
 		964158821F42A1EE005AF4A4 /* Persion.m in Sources */ = {isa = PBXBuildFile; fileRef = 964158811F42A1EE005AF4A4 /* Persion.m */; };
+		964423751F4C21480024F8AB /* videoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964423741F4C21480024F8AB /* videoViewController.m */; };
 		96CDF3E91F453FD1009C79AC /* longinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CDF3E81F453FD1009C79AC /* longinViewController.m */; };
 		96CDF3EC1F453FF8009C79AC /* LongViewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CDF3EB1F453FF8009C79AC /* LongViewViewModel.m */; };
 		96CDF3EF1F454029009C79AC /* longInview.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CDF3EE1F454029009C79AC /* longInview.m */; };
@@ -152,6 +153,8 @@
 		96202D081F4AD597006CF139 /* fistViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fistViewModel.m; sourceTree = "<group>"; };
 		964158801F42A1EE005AF4A4 /* Persion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Persion.h; sourceTree = "<group>"; };
 		964158811F42A1EE005AF4A4 /* Persion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Persion.m; sourceTree = "<group>"; };
+		964423731F4C21480024F8AB /* videoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = videoViewController.h; sourceTree = "<group>"; };
+		964423741F4C21480024F8AB /* videoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = videoViewController.m; sourceTree = "<group>"; };
 		96CDF3E71F453FD1009C79AC /* longinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = longinViewController.h; sourceTree = "<group>"; };
 		96CDF3E81F453FD1009C79AC /* longinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = longinViewController.m; sourceTree = "<group>"; };
 		96CDF3EA1F453FF8009C79AC /* LongViewViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongViewViewModel.h; sourceTree = "<group>"; };
@@ -411,6 +414,8 @@
 				961A174F1F4BF70200B7CA7C /* normaView.m */,
 				961A17511F4BF71800B7CA7C /* normaViewModel.h */,
 				961A17521F4BF71800B7CA7C /* normaViewModel.m */,
+				964423731F4C21480024F8AB /* videoViewController.h */,
+				964423741F4C21480024F8AB /* videoViewController.m */,
 				961A17541F4BF72500B7CA7C /* normaModel.h */,
 				961A17551F4BF72500B7CA7C /* normaModel.m */,
 				96202D041F4AD50C006CF139 /* fisModel.h */,
@@ -665,6 +670,7 @@
 				961A17591F4C01C900B7CA7C /* normalCollectionViewController.m in Sources */,
 				961A17381F4BD57600B7CA7C /* MJRefreshBackFooter.m in Sources */,
 				96CDF4321F4545CE009C79AC /* UIProgressView+AFNetworking.m in Sources */,
+				964423751F4C21480024F8AB /* videoViewController.m in Sources */,
 				961A17501F4BF70200B7CA7C /* normaView.m in Sources */,
 				96CDF42F1F4545CE009C79AC /* UIAlertView+AFNetworking.m in Sources */,
 				96CDF42D1F4545CE009C79AC /* AFNetworkActivityIndicatorManager.m in Sources */,

@@ -10,16 +10,37 @@
 #define itemHeight 140
 #import "normaView.h"
 #import <CommonCrypto/CommonDigest.h>
-
+#import "videoViewController.h"
 
 @implementation normaView
 -(void)bindViewModel:(NSDictionary *)viewModel
 {
-    NSString *imageUrl = [viewModel valueForKey:@"imageDesc"];
-    NSString *desc = [viewModel valueForKey:@"imageUrl"];
-     [self.playBtn setBackgroundImage:[UIImage  imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4263063468,1600479091&fm=26&gp=0.jpg"]]] forState:UIControlStateNormal];
-    self.descLab.text = desc;
+  dispatch_async(dispatch_get_main_queue(), ^{
+      NSString *imageUrl = [viewModel valueForKey:@"imageDesc"];
+      NSString *desc = [viewModel valueForKey:@"imageUrl"];
+      [self.playBtn setBackgroundImage:[UIImage  imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4263063468,1600479091&fm=26&gp=0.jpg"]]] forState:UIControlStateNormal];
+      @weakify(self)
+      self.playBtn.rac_command=[[RACCommand alloc]  initWithSignalBlock:^RACSignal *(id input) {
+          NSLog(@"%@",input);
+          @strongify(self)
+          videoViewController *v = [videoViewController new];
+          v.str = imageUrl;
+          [[self controller].navigationController pushViewController:v animated:YES];
+          return [RACSignal empty];
+      }];
+      self.descLab.text = desc;
+  });
+}
 
+
+-(UIViewController *)controller{
+    for (UIView* next = [self superview]; next; next = next.superview) {
+        UIResponder* nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController*)nextResponder;
+        }
+    }
+    return nil;
 }
 
 -(instancetype)initWithFrame:(CGRect)frame

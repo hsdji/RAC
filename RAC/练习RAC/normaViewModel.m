@@ -40,6 +40,8 @@
 
 -(void)refresh
 {
+    
+    NSLog(@"是否在刷新~~~~~~~~~~~%ld",self.isLoading);
     if (!self.isLoading) {
         RACTuple *tuple = [RACTuple tupleWithObjects:@"1", nil];
         [self.raccommand execute:tuple];
@@ -64,10 +66,12 @@
                 NSArray *arr2 = [arr[i] valueForKey:@"main_mv_urls"];
                 NSArray *imageArr = [arr[i] valueForKey:@"cover_thumbnail_urls"];
                 for (int i =0; i<arr2.count; i++) {
-                    NSString  *str = [arr2[i] valueForKey:@"url"];
-                    NSString *imageStr = [imageArr[i] valueForKey:@"url"];
-                    NSDictionary *dic = @{@"imageDesc":str,@"imageUrl":imageStr};
-                    [alldata addObject:dic];
+                    if (i%2==0) {
+                        NSString  *str = [arr2[i] valueForKey:@"url"];
+                        NSString *imageStr = [imageArr[i] valueForKey:@"url"];
+                        NSDictionary *dic = @{@"imageDesc":str,@"imageUrl":imageStr};
+                        [alldata addObject:dic];
+                    }
                 }
             }
             [subscriber sendNext:alldata];
