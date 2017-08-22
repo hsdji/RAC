@@ -11,6 +11,7 @@
 #import "baseTableViewController.h"
 #import "fistCell.h"
 #import "MJRefresh.h"
+#import "normalCollectionViewController.h"
 @interface fistTableViewController()
 @property (nonatomic,strong)fistViewModel *viewModel;
 @property(strong, nonatomic) baseTableViewController *helper;
@@ -38,6 +39,8 @@
             NSIndexPath *index = turple.second;
             fisModel *model = turple.first;
             NSLog(@"点击了地%ld行   标题是:%@",index.row,model.desc);
+            normalCollectionViewController *v = [normalCollectionViewController new];
+            [self.navigationController pushViewController:v animated:YES];
             return [RACSignal empty];
         }];
         //列表绑定数据

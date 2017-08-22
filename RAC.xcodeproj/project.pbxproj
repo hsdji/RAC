@@ -34,6 +34,10 @@
 		961A17481F4BD57600B7CA7C /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 961A17321F4BD57600B7CA7C /* UIScrollView+MJRefresh.m */; };
 		961A17491F4BD57600B7CA7C /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 961A17341F4BD57600B7CA7C /* UIView+MJExtension.m */; };
 		961A174A1F4BD57600B7CA7C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 961A17351F4BD57600B7CA7C /* README.md */; };
+		961A17501F4BF70200B7CA7C /* normaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 961A174F1F4BF70200B7CA7C /* normaView.m */; };
+		961A17531F4BF71800B7CA7C /* normaViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 961A17521F4BF71800B7CA7C /* normaViewModel.m */; };
+		961A17561F4BF72500B7CA7C /* normaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 961A17551F4BF72500B7CA7C /* normaModel.m */; };
+		961A17591F4C01C900B7CA7C /* normalCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 961A17581F4C01C900B7CA7C /* normalCollectionViewController.m */; };
 		96202CFA1F4AD3CD006CF139 /* baseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96202CF71F4AD3CD006CF139 /* baseTableViewCell.m */; };
 		96202CFB1F4AD3CD006CF139 /* baseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96202CF91F4AD3CD006CF139 /* baseTableViewController.m */; };
 		96202CFE1F4AD3E6006CF139 /* fistTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96202CFD1F4AD3E6006CF139 /* fistTableViewController.m */; };
@@ -124,6 +128,14 @@
 		961A17331F4BD57600B7CA7C /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		961A17341F4BD57600B7CA7C /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		961A17351F4BD57600B7CA7C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		961A174E1F4BF70200B7CA7C /* normaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = normaView.h; sourceTree = "<group>"; };
+		961A174F1F4BF70200B7CA7C /* normaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = normaView.m; sourceTree = "<group>"; };
+		961A17511F4BF71800B7CA7C /* normaViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = normaViewModel.h; sourceTree = "<group>"; };
+		961A17521F4BF71800B7CA7C /* normaViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = normaViewModel.m; sourceTree = "<group>"; };
+		961A17541F4BF72500B7CA7C /* normaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = normaModel.h; sourceTree = "<group>"; };
+		961A17551F4BF72500B7CA7C /* normaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = normaModel.m; sourceTree = "<group>"; };
+		961A17571F4C01C900B7CA7C /* normalCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = normalCollectionViewController.h; sourceTree = "<group>"; };
+		961A17581F4C01C900B7CA7C /* normalCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = normalCollectionViewController.m; sourceTree = "<group>"; };
 		96202CF51F4AD3CD006CF139 /* baseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseTableView.h; sourceTree = "<group>"; };
 		96202CF61F4AD3CD006CF139 /* baseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseTableViewCell.h; sourceTree = "<group>"; };
 		96202CF71F4AD3CD006CF139 /* baseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseTableViewCell.m; sourceTree = "<group>"; };
@@ -393,6 +405,14 @@
 				96202CF41F4AD3CD006CF139 /* tableView基类 */,
 				96202CFC1F4AD3E6006CF139 /* fistTableViewController.h */,
 				96202CFD1F4AD3E6006CF139 /* fistTableViewController.m */,
+				961A17571F4C01C900B7CA7C /* normalCollectionViewController.h */,
+				961A17581F4C01C900B7CA7C /* normalCollectionViewController.m */,
+				961A174E1F4BF70200B7CA7C /* normaView.h */,
+				961A174F1F4BF70200B7CA7C /* normaView.m */,
+				961A17511F4BF71800B7CA7C /* normaViewModel.h */,
+				961A17521F4BF71800B7CA7C /* normaViewModel.m */,
+				961A17541F4BF72500B7CA7C /* normaModel.h */,
+				961A17551F4BF72500B7CA7C /* normaModel.m */,
 				96202D041F4AD50C006CF139 /* fisModel.h */,
 				96202D051F4AD50C006CF139 /* fisModel.m */,
 				96202CFF1F4AD3FD006CF139 /* fistCell.h */,
@@ -642,8 +662,10 @@
 				2E0AD1CC1F3B0BA200C8992E /* ViewController.m in Sources */,
 				961A173C1F4BD57600B7CA7C /* MJRefreshAutoGifFooter.m in Sources */,
 				961A174A1F4BD57600B7CA7C /* README.md in Sources */,
+				961A17591F4C01C900B7CA7C /* normalCollectionViewController.m in Sources */,
 				961A17381F4BD57600B7CA7C /* MJRefreshBackFooter.m in Sources */,
 				96CDF4321F4545CE009C79AC /* UIProgressView+AFNetworking.m in Sources */,
+				961A17501F4BF70200B7CA7C /* normaView.m in Sources */,
 				96CDF42F1F4545CE009C79AC /* UIAlertView+AFNetworking.m in Sources */,
 				96CDF42D1F4545CE009C79AC /* AFNetworkActivityIndicatorManager.m in Sources */,
 				96CDF4271F4545CE009C79AC /* AFURLConnectionOperation.m in Sources */,
@@ -655,6 +677,7 @@
 				96202CFA1F4AD3CD006CF139 /* baseTableViewCell.m in Sources */,
 				961A17371F4BD57600B7CA7C /* MJRefreshAutoFooter.m in Sources */,
 				96CDF4341F4545CE009C79AC /* UIWebView+AFNetworking.m in Sources */,
+				961A17561F4BF72500B7CA7C /* normaModel.m in Sources */,
 				961A17461F4BD57600B7CA7C /* MJRefreshConst.m in Sources */,
 				96202CFE1F4AD3E6006CF139 /* fistTableViewController.m in Sources */,
 				96CDF4241F4545CE009C79AC /* AFHTTPSessionManager.m in Sources */,
@@ -664,6 +687,7 @@
 				961A17411F4BD57600B7CA7C /* MJRefreshBackStateFooter.m in Sources */,
 				96CDF3E91F453FD1009C79AC /* longinViewController.m in Sources */,
 				96CDF42A1F4545CE009C79AC /* AFURLSessionManager.m in Sources */,
+				961A17531F4BF71800B7CA7C /* normaViewModel.m in Sources */,
 				964158821F42A1EE005AF4A4 /* Persion.m in Sources */,
 				961A17491F4BD57600B7CA7C /* UIView+MJExtension.m in Sources */,
 				961A173D1F4BD57600B7CA7C /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -795,8 +819,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RAC/YZwebp/include/YZwebp",
+				);
 				INFOPLIST_FILE = RAC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RAC/YZwebp",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ledaochuxing.RAC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -808,8 +840,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RAC/YZwebp/include/YZwebp",
+				);
 				INFOPLIST_FILE = RAC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RAC/YZwebp",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ledaochuxing.RAC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
