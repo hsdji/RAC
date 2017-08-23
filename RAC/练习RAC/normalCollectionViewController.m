@@ -55,6 +55,13 @@ static NSString * const reuseIdentifier = @"Cell";
     
 }
 
+-(BOOL)shouldAutorotate{
+    return NO;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+}
 
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -77,7 +84,9 @@ static NSString * const reuseIdentifier = @"Cell";
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     if (scrollView.contentOffset.y- self.lastOffsetY> 2*SCREEN_HEIGHT) {
-        [self.viewModel refresh];
+        dispatch_async(dispatch_get_main_queue(), ^{
+           [self.viewModel refresh]; 
+        });
         self.lastOffsetY=scrollView.contentOffset.y;
     }
 }

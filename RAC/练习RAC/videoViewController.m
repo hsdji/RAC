@@ -19,6 +19,7 @@
     CGFloat height;
 }
 @property (nonatomic,strong)AVPlayer *avPlayer;
+@property (nonatomic,strong)UIImageView *imageView;
 @end
 
 @implementation videoViewController
@@ -29,8 +30,11 @@
     y = self.view.frame.origin.y;
     width = self.view.frame.size.width;
     height= self.view.frame.size.height;
-    
-    
+    self.imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"play"]];
+    self.imageView.center = self.view.center;
+    self.imageView.layer.cornerRadius = 30;
+    self.imageView.clipsToBounds =YES;
+    self.imageView.frame = CGRectMake((width-60)/2.0, (height-60)/2.0, 60, 60);
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusBarOrientationChange:)name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
     AVPlayerItem *playerItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:self.str]];
     self.avPlayer = [AVPlayer playerWithPlayerItem:playerItem];
@@ -41,6 +45,7 @@
     [self.view.layer addSublayer:playerLayer];
     [self.avPlayer play];
      [[NSNotificationCenter defaultCenter] addObserver:self           selector:@selector(playbackFinished:) name:AVPlayerItemDidPlayToEndTimeNotification   object:playerItem];
+    self.navigationController.navigationBar.hidden= YES;
 }
 
 
@@ -68,16 +73,36 @@
     if (orientation == UIInterfaceOrientationLandscapeRight||orientation ==UIInterfaceOrientationLandscapeLeft) {
         playerLayer.frame = CGRectMake(x, y, height, width);
         playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-        self.navigationController.navigationBar.hidden= YES;
+        if(self.avPlayer.rate == 1.0)
+        {
+            self.navigationController.navigationBar.hidden= YES;
+        }else{
+            self.navigationController.navigationBar.hidden= NO;
+        }
+        self.imageView.frame = CGRectMake((height-60)/2.0, (width-60)/2.0, 60, 60);
     }
     if (orientation == UIInterfaceOrientationPortraitUpsideDown||orientation == UIInterfaceOrientationPortrait){
         playerLayer.frame = CGRectMake(x,y, width, height);
         playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
         self.navigationController.navigationBar.hidden= NO;
+        self.imageView.frame = CGRectMake((width-60)/2.0, (height-60)/2.0, 60, 60);
     }
 }
 
-
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    
+    if(self.avPlayer.rate == 1.0)
+    {
+        self.navigationController.navigationBar.hidden = NO;
+        [self.avPlayer pause];
+        [self.view addSubview:self.imageView];
+    }else{
+        self.navigationController.navigationBar.hidden = YES;
+        [self.avPlayer play];
+        [self.imageView removeFromSuperview];
+    }
+}
 
 
 @end
