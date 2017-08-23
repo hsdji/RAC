@@ -1,4 +1,6 @@
 # RAC
+![Image text](https://raw.githubusercontent.com/hsdji/RAC/master/12345.gif)
+
 一个练习RAC的小demo 采用RAC+MVVM来实现一个简单的UItableVIew
 RAC  学习笔记
 RACStream是RACSignal和RACSequeuece的父类,定义了一些流的操作方法.从名字上可以看出,这个对象就像流一样可以往任意一个出口流,同时也可以给整这个流设置管卡，改变流(这里的改变,既包括内容，也包含融合,也包括流的筛选等等)
@@ -92,4 +94,5 @@ nextBlock(value);
 
 虽说例子简单，但是我们可以看到signal中值的流向，以及监听signal的本质。各个block之间，一个扣着一个，代码的初始可读性可能比较难理解，但是真正理解之后，你会发现RAC真的很神奇。 
 在前面提到了RAC的订阅原理，虽然中间忽略了一些其它东西（比如说RACSchedule，RACDisposable），但任何一个RACSignal的订阅事件的value的流向都是如此。既然是一步步的流，那我们在使用过程中，必然会出现想要改变这个流，或者对这个流进行一些包装。简单的说，从一个RACSignal在经过中间某一步的操作，已经变成另外一个RACSignal；
-![Image text](https://raw.githubusercontent.com/hsdji/RAC/master/aaaaaaa.gif)
+
+
