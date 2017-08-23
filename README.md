@@ -35,11 +35,16 @@ RACSignal可以说是RAC中一个重要的类,RACSignal的订阅是实用RAC的�
 
 1.RACSignal  订阅机制
 	1>RACSignal的创建:RASSignal的创建通常使用+createSignla方法创建出来的.传参数是一个(参数是RACSubscriber的一个实力,返回的是RACDidposable实例)的一个block;RACSignal里面又一个didSubscriber的变量,创建的时候把传入block赋值给这个didSubscribe.
+
 	2>RACSignal订阅操作:[RACsignal subscribeNext];这个就是RACsignal的订阅方法.以下分几步来说明.
 		1⃣️在使用这个方法的时候,会创建一个RACSubscriber的一个实例(中间操作的,对使用方透明),该方法实现了RACSubscriber(protocol),拥有block的三个属性,分别对应next,error，complete，即使用方调用[RACSignal subNext: error: complete:]传入三个block。
+
 		2⃣️[RACSignal subscribe:(传参是上面的创建的实力)target]之后回实际进入这个方法.这个方法的核心就是执行RACSignal的didSubscribe这个block,传参数就是上面创建的实例target
+
 		3⃣️在didSubscribe这个block执行的过程中,一般都会有［RACscriber sendNext/sendError/SendComplete］,而这个方法的内部的实现就是走subscribe的next,error，complete对应的block,也就是在［RACsignal subscribeNext］传入的block。
+
 		4⃣️最后一步，深入到＝源码,当error或者是complete对应的block走过一次,subscribe的所有的block属性都会被置nil，不会在接受任何数据,也就是意味着本次订阅已经结束.
+
 2.RACSignal订阅的例子
 	RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscribr *subscriber>)]{
 	[subscriber sendNext:@“fist value”];
